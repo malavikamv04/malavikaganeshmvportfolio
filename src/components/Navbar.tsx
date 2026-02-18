@@ -3,7 +3,7 @@ import { Mail, Linkedin, Phone } from "lucide-react";
 const navLinks = [
   { label: "About", href: "#about" },
   { label: "Projects", href: "#projects" },
-  { label: "AI & Research", href: "#ai-research" },
+  
   { label: "Skills", href: "#skills" },
   { label: "Achievements", href: "#achievements" },
   { label: "Contact", href: "#contact" },

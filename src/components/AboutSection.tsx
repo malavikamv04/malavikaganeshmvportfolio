@@ -2,8 +2,8 @@ const languages = [
   { name: "English", level: 90 },
   { name: "Malayalam", level: 95 },
   { name: "Kannada", level: 85 },
-  { name: "Tamil", level: 60 },
-  { name: "Hindi", level: 70 },
+  { name: "Tamil", level: 70 },
+  { name: "Hindi", level: 55 },
 ];
 
 const AboutSection = () => {

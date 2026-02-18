@@ -32,7 +32,7 @@ const HeroSection = () => {
           </a>
           <a
             href="/Malavika_Ganesh_Resume.pdf"
-            download
+            download="Malavika_Ganesh_Resume.pdf"
             className="px-8 py-3.5 rounded-lg border border-primary/40 text-primary font-sans-body font-semibold text-sm tracking-wide hover:bg-primary/10 transition-all duration-300"
           >
             Download Resume
