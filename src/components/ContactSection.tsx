@@ -11,7 +11,7 @@ const ContactSection = () => {
           Let's <span className="text-primary">Connect</span>
         </h2>
         <p className="text-muted-foreground font-sans-body mb-3 reveal-child">
-          Open to internships, research roles, and collaboration opportunities.
+          Open to internships and collaboration opportunities.
         </p>
         <p className="text-muted-foreground/60 font-sans-body text-sm mb-12 reveal-child">
           I'd love to hear about interesting projects and opportunities.
