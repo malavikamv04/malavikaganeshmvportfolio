@@ -1,3 +1,5 @@
+import { useScrollReveal } from "@/hooks/useScrollReveal";
+
 const projects = [
   {
     title: "FlashChat — AI Research Paper Summarization",
@@ -18,9 +20,11 @@ const projects = [
 ];
 
 const ProjectsSection = () => {
+  const { ref, isVisible } = useScrollReveal();
+
   return (
     <section id="projects" className="py-24 px-6">
-      <div className="max-w-5xl mx-auto">
+      <div ref={ref} className={`max-w-5xl mx-auto reveal ${isVisible ? "visible" : ""}`}>
         <h2 className="text-3xl md:text-4xl font-serif font-bold mb-4 text-center">
           Featured <span className="text-primary">Projects</span>
         </h2>
@@ -32,7 +36,7 @@ const ProjectsSection = () => {
           {projects.map((project) => (
             <div
               key={project.title}
-              className={`glow-card rounded-xl p-8 border ${
+              className={`reveal-child glow-card rounded-xl p-8 border ${
                 project.highlight
                   ? "border-primary/30 bg-card"
                   : "border-border bg-card"

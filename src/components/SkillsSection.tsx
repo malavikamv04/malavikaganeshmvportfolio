@@ -1,3 +1,5 @@
+import { useScrollReveal } from "@/hooks/useScrollReveal";
+
 const skillCategories = [
   {
     title: "Programming",
@@ -22,16 +24,18 @@ const skillCategories = [
 ];
 
 const SkillsSection = () => {
+  const { ref, isVisible } = useScrollReveal();
+
   return (
     <section id="skills" className="py-24 px-6">
-      <div className="max-w-5xl mx-auto">
+      <div ref={ref} className={`max-w-5xl mx-auto reveal ${isVisible ? "visible" : ""}`}>
         <h2 className="text-3xl md:text-4xl font-serif font-bold mb-14 text-center">
           Skills & <span className="text-primary">Technologies</span>
         </h2>
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
           {skillCategories.map((cat) => (
-            <div key={cat.title} className="space-y-4">
+            <div key={cat.title} className="space-y-4 reveal-child">
               <h3 className="text-lg font-serif font-semibold text-primary">{cat.title}</h3>
               <div className="flex flex-wrap gap-2">
                 {cat.skills.map((skill) => (
