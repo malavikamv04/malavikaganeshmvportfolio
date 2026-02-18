@@ -1,4 +1,5 @@
 import { ExternalLink } from "lucide-react";
+import { useScrollReveal } from "@/hooks/useScrollReveal";
 
 const achievements = [
   {
@@ -27,16 +28,18 @@ const certifications = [
 ];
 
 const AchievementsSection = () => {
+  const { ref, isVisible } = useScrollReveal();
+
   return (
     <section id="achievements" className="py-24 px-6">
-      <div className="max-w-5xl mx-auto">
+      <div ref={ref} className={`max-w-5xl mx-auto reveal ${isVisible ? "visible" : ""}`}>
         <h2 className="text-3xl md:text-4xl font-serif font-bold mb-14 text-center">
           Achievements & <span className="text-primary">Certifications</span>
         </h2>
 
         <div className="grid md:grid-cols-3 gap-6 mb-16">
           {achievements.map((a) => (
-            <div key={a.title} className="glow-card rounded-xl border border-border bg-card p-6">
+            <div key={a.title} className="reveal-child glow-card rounded-xl border border-border bg-card p-6">
               <h3 className="text-lg font-serif font-bold text-foreground mb-1">{a.title}</h3>
               <p className="text-xs font-sans-body text-primary font-medium mb-3">{a.org}</p>
               <p className="text-sm text-muted-foreground font-sans-body leading-relaxed">{a.description}</p>
@@ -49,7 +52,7 @@ const AchievementsSection = () => {
           {certifications.map((c) => (
             <div
               key={c.name}
-              className="flex items-center justify-between gap-3 rounded-lg border border-border bg-card px-5 py-4 hover:border-primary/30 transition-colors duration-300"
+              className="reveal-child flex items-center justify-between gap-3 rounded-lg border border-border bg-card px-5 py-4 hover:border-primary/30 hover:scale-[1.02] transition-all duration-300"
             >
               <span className="text-sm font-sans-body text-muted-foreground">{c.name}</span>
               <ExternalLink size={14} className="text-primary/50 flex-shrink-0" />
