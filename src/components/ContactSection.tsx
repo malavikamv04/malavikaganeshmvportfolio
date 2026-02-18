@@ -33,7 +33,7 @@ const ContactSection = () => {
           </a>
           <a
             href="/Malavika_Ganesh_Resume.pdf"
-            download
+            download="Malavika_Ganesh_Resume.pdf"
             className="flex items-center gap-2 px-6 py-3 rounded-lg border border-border text-muted-foreground font-sans-body font-semibold text-sm hover:border-primary/40 hover:text-primary transition-all duration-300"
           >
             <Download size={16} />
